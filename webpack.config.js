@@ -12,7 +12,8 @@ var config = {
   devServer: {
     inline: true,
     port: 8080,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    disableHostCheck: true
   },
 
   // 配置模块的处理逻辑，用loaders定义加载器
