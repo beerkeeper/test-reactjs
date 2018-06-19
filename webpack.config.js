@@ -11,7 +11,8 @@ var config = {
   // 设置服务器端口号
   devServer: {
     inline: true,
-    port: 8080
+    port: 8080,
+    host: '0.0.0.0'
   },
 
   // 配置模块的处理逻辑，用loaders定义加载器
