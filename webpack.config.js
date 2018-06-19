@@ -1,11 +1,13 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 var config = {
   // 打包的入口文件
-  entry: './main.js',
+  entry: './src/main.js',
 
   // 配置打包结果，path定义输出文件夹，filename定义打包结果文件的名称
   output: {
-    path: './',
-    filename: 'index.js'
+    path: './dist',
+    filename: 'bundle.js'
   },
 
   // 设置服务器端口号
@@ -28,7 +30,12 @@ var config = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+  ]
 }
 
 module.exports = config;
