@@ -1,24 +1,18 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 var config = {
-  // 打包的入口文件
   entry: './src/main.js',
-
-  // 配置打包结果，path定义输出文件夹，filename定义打包结果文件的名称
   output: {
     path: './dist',
     filename: 'bundle.js'
   },
 
-  // 设置服务器端口号
   devServer: {
     inline: true,
-    port: 8080,
-    host: '0.0.0.0',
-    disableHostCheck: true
+    port: 8080
   },
 
-  // 配置模块的处理逻辑，用loaders定义加载器
   module: {
     loaders: [
       {
