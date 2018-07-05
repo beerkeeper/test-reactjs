@@ -25,6 +25,9 @@ first, you should install node and npm.
     }
 ```
 
+
+blablalba
+
 7. touch webpack.config.js
 ```javascript
     var config = {
